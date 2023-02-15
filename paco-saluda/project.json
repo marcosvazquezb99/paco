@@ -1,0 +1,47 @@
+{
+  "name": "paco-saluda",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "paco-saluda/src",
+  "prefix": "paco",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "paco-saluda/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "paco-saluda/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "paco-saluda/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "paco-saluda/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["paco-saluda/**/*.ts", "paco-saluda/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}
