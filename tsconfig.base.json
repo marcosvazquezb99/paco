@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@abacus-consulting/paco": ["paco-saluda/src/index.ts"]
+      "@abacus-consulting/paco": ["paco-saluda/src/index.ts"],
+      "@marcosvazquezb99": ["halo-paco/src/index.ts"],
+      "@marcosvazquezb99/hi-paco": ["hi/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
