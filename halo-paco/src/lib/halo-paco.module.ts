@@ -5,5 +5,6 @@ import { SaludoDePacoComponent } from './saludo-de-paco/saludo-de-paco.component
 @NgModule({
   imports: [CommonModule],
   declarations: [SaludoDePacoComponent],
+  exports: [SaludoDePacoComponent],
 })
 export class HaloPacoModule {}
